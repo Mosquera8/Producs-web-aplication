@@ -1,0 +1,31 @@
+﻿@model ProductsWeb.Application.Models.Register
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="Register" id="login_form_id">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" id="email_form_id">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" type="email" id="txtEmail" name="email" placeholder="username@domain.com" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group" id="pasword_form_id">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" type="password" id="txtPassword" name="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" id="log_btn_id" />
+                <a asp-action="Index" class="btn btn-outline-info">Back to Home</a>
+            </div>
+        </form>
+    </div>
+</div>

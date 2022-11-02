@@ -1,0 +1,24 @@
+﻿@model ProductsWeb.Application.Models.Categorie
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>la categoria que eliminaste pertenecia al id:</h3>
+<div>
+    <h4>Categoria</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.Raw(ViewData["id"])
+        </dd>
+    </dl>    
+    <form asp-action="Delete">
+        <a class="btn btn-warning" asp-action="Index">Atras</a>
+    </form>
+</div>
